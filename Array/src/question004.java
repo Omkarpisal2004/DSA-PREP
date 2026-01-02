@@ -1,4 +1,4 @@
-public class question4 {
+public class question004 {
     public static void main(String[] args) {
         //min element in array
         int arr [] = {5,74,9,0};

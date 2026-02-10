@@ -1,5 +1,5 @@
 
-        public class question0010 {
+        public class question010 {
 
             public static void main(String[] args) {
                 String str = "I am here";

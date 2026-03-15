@@ -18,8 +18,8 @@ public class question009 {
     }
 
     public static void main(String[] args) {
-        int arr[] = {2, 8, 11, 7, 15};
-        int target = 9;
+        int arr[] = {-1, -2, -3, -4, -5};
+        int target = -8;
         Twosum(arr, target);
     }
 }

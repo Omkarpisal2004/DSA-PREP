@@ -1,34 +1,48 @@
 public class question030 {
-    public static int MaxSumCircularSubArray(int nums[]){
 
-        int totalSum = 0;
+    public static int MaxSumCircularSubArray(int nums[]) {
 
-        int maxSum = nums[0];
-        int curMax = 0;
+        // total sum of the array
+        int totalSum = nums[0];
 
-        int minSum = nums[0];
-        int curMin = 0;
+        // variables for Kadane's algorithm (maximum subarray)
+        int maxSum = nums[0];     // stores maximum subarray sum found so far
+        int curMax = nums[0];     // current maximum ending at index i
 
-        for(int num : nums){
+        // variables for minimum subarray (needed for circular case)
+        int minSum = nums[0];     // stores minimum subarray sum found so far
+        int curMin = nums[0];     // current minimum ending at index i
 
-            curMax = Math.max(curMax + num , num);
-            maxSum = Math.max(maxSum , curMax);
+        // traverse array starting from index 1
+        for (int i = 1; i < nums.length; i++) {
 
-            curMin = Math.min(curMin + num , num);
-            minSum = Math.min(minSum , curMin);
+            // Kadane's algorithm to find maximum subarray sum
+            // either start new subarray from nums[i] or extend previous subarray
+            curMax = Math.max(nums[i], curMax + nums[i]);
+            maxSum = Math.max(maxSum, curMax);
 
-            totalSum += num;
+            // similar logic but for minimum subarray
+            // needed to compute circular maximum
+            curMin = Math.min(nums[i], curMin + nums[i]);
+            minSum = Math.min(minSum, curMin);
+
+            // keep adding elements to get total array sum
+            totalSum += nums[i];
         }
 
-        if(maxSum < 0){
+        // edge case: if all numbers are negative
+        // in this case circular sum becomes incorrect
+        if (maxSum < 0) {
             return maxSum;
         }
 
-        return Math.max(maxSum , totalSum - minSum);
+        // final answer:
+        // maximum of normal subarray OR circular subarray
+        return Math.max(maxSum, totalSum - minSum);
     }
 
     public static void main(String[] args) {
-int nums [] = {1,-2,3,-2};
+        int nums[] = {5, -3, 5};
         System.out.println(MaxSumCircularSubArray(nums));
     }
 }

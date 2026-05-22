@@ -58,7 +58,7 @@ public class question003 {
     public static void main(String[] args) {
 
 
-        String s = "abc";
+        String s = "abca";
 
 
         System.out.println(validPalindrome(s));

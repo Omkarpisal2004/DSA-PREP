@@ -17,10 +17,10 @@ public class question008 {
         int ele = 2;
 
         int newLength = removeElement(arr, ele);
-//        for(int i = 0 ; i<newLength;i++){
-//            System.out.print(arr[i] + " ");
-//        }
-        int[] result = Arrays.copyOf(arr,newLength);
-        System.out.println(Arrays.toString(result));
+        for(int i = 0 ; i<newLength;i++){
+            System.out.print(arr[i] + " ");
+        }
+//        int[] result = Arrays.copyOf(arr,newLength);
+//        System.out.println(Arrays.toString(result));
     }
 }

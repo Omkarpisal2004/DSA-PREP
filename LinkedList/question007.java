@@ -14,7 +14,7 @@ public class question007 {
         ListNode fast = head;
 
         // check if cycle exist
-        while (fast != null && fast.next != null){
+        while (fast != null || fast.next != null){
             slow = slow.next;
             fast = fast.next.next;
 

@@ -4,6 +4,10 @@ import java.util.Stack;
 
 public class maxmimal_rectangle {
     static int maxmimaus(char [][] matrix){
+        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
+            return 0;
+        }
+
         int i = matrix.length;
         int j = matrix[0].length;
         int maxArea= 0;

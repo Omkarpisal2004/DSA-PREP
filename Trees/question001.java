@@ -27,6 +27,11 @@ public class question001 {
 
         root.leftNode.leftNode = new TreeNode(4);
         root.leftNode.rightNode = new TreeNode(5);
+        root.leftNode.rightNode.leftNode = new TreeNode(6);
+        root.rightNode.leftNode = new TreeNode(7);
+        root.rightNode.rightNode = new TreeNode(8);
+        root.rightNode.rightNode.leftNode = new TreeNode(9);
+        root.rightNode.rightNode.rightNode = new TreeNode(10);
         preOrder(root);
     }
 }

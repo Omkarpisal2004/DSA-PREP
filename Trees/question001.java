@@ -1,5 +1,5 @@
 package Trees;
-// PreOrder using recursion
+// PreOrder using recursionn
 public class question001 {
     static class TreeNode{
         int val ;

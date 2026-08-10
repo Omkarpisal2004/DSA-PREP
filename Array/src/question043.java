@@ -1,6 +1,6 @@
 public class question043 {
 
-    // Backspace string compare
+    // Backspace string comparee
     static boolean backspace(String s , String t){
         int rightS = s.length()-1;
         int rightT = t.length()-1;

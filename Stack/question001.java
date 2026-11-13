@@ -11,7 +11,7 @@ public class question001 {
             else if(ch == '[' ) st.push(']');
             else if(ch == '{') st.push('}');
             else {
-                if(st.isEmpty() || st.pop() != ch){ // if stack is not empty and poped element != ch
+                if( st.pop() != ch){ // if stack is not empty and poped element != ch
                     return false;
                 }
             }

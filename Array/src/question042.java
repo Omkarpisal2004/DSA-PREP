@@ -1,5 +1,5 @@
 import java.util.Arrays;
-// square of sorted array
+// 3
 public class question042 {
     static int[] squareOfSortedArray(int nums[]){
         int left = 0 ; int right =nums.length-1;

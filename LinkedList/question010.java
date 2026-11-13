@@ -64,7 +64,7 @@ public class question010 {
         return head;
     }
     public static void main(String[] args) {
-ListNode head = create(new int[]{1,2,3,4,5});
+ListNode head = create(new int[]{4,2,1,3});
 ListNode ans = sortList(head);
 
 while (ans != null){

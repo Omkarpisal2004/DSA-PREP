@@ -22,11 +22,11 @@ public class question004 {
         int left = matrix[0][0];
         int right = matrix[n-1][n-1];
 
-        while (left<right){
+        while (left<=right){
             int mid = left +(right-left)/2;
             if(count(matrix , mid) < target){
                 left = mid+1;
-            } else right = mid;
+            } else right = mid-1;
         }
         return left;
     }
@@ -36,7 +36,7 @@ public class question004 {
                 {10, 11, 13},
                 {12, 13, 15}
         };
-        int target = 8 ;
+        int target = 2 ;
         System.out.println(smallest(matrix , target));
 
     }

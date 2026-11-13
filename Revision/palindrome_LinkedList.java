@@ -11,7 +11,7 @@ public class palindrome_LinkedList {
     }
     static boolean isPalindrome(ListNode head){
         if(head == null || head.next == null){
-            return false;
+            return true;
         }
 
         // find mid

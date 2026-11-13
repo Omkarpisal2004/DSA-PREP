@@ -20,6 +20,7 @@ public class question002 {
         }
         return slow;
     }
+
     static ListNode createList(int arr []){
         ListNode head = new ListNode(arr[0]);
         ListNode curr = head;

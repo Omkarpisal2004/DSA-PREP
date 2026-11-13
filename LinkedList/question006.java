@@ -34,6 +34,7 @@ public class question006 {
             curr.next = prev;
             prev = curr;
             curr = next;
+            
         }
 
         ListNode l1 = head;

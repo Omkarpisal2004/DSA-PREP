@@ -3,7 +3,8 @@ package BinarySearch;
 
 
 // Capacity To Ship Packages Within D Days
-public class question007 {
+public class
+question007 {
     static int ship(int weight[] , int days){
         int left = 0 ; int right = 0 ;
         for (int ele : weight){
